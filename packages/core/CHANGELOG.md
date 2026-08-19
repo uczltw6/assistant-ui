@@ -1,5 +1,29 @@
 # @assistant-ui/core
 
+## 0.3.15
+
+### Patch Changes
+
+- [#6100](https://github.com/assistant-ui/assistant-ui/pull/6100) [`fa30915`](https://github.com/assistant-ui/assistant-ui/commit/fa309156e033dc085c0d3b8fb97c27c81a3d2c6e) - fix: propagate AssistantFrame tool cancellation across the frame boundary ([@Kinfe123](https://github.com/Kinfe123))
+
+- [#5823](https://github.com/assistant-ui/assistant-ui/pull/5823) [`b355aef`](https://github.com/assistant-ui/assistant-ui/commit/b355aefbe2403025562f0e08494a57450bfdc049) - fix: prevent AssistantFrameProvider from ignoring a later explicit targetOrigin ([@Kinfe123](https://github.com/Kinfe123))
+
+- [#6107](https://github.com/assistant-ui/assistant-ui/pull/6107) [`4947ef4`](https://github.com/assistant-ui/assistant-ui/commit/4947ef4f9b0956bd4ca21c457b3cc7e79a2fc9e0) - fix: preserve falsy assistant transport artifacts ([@Kinfe123](https://github.com/Kinfe123))
+
+- [#5809](https://github.com/assistant-ui/assistant-ui/pull/5809) [`332f736`](https://github.com/assistant-ui/assistant-ui/commit/332f736e64bfa26f76cd60318279697ddbc0b36d) - fix: load archived threads in the cloud thread list adapter ([@SnowingFox](https://github.com/SnowingFox))
+
+- [#6112](https://github.com/assistant-ui/assistant-ui/pull/6112) [`ef9254d`](https://github.com/assistant-ui/assistant-ui/commit/ef9254d5b2174fb4b58b4e954a8a0d60910a484c) - fix: contain a synchronously throwing clipboard writer in useActionBarCopy ([@samdickson22](https://github.com/samdickson22))
+
+- [#6125](https://github.com/assistant-ui/assistant-ui/pull/6125) [`1b30bfd`](https://github.com/assistant-ui/assistant-ui/commit/1b30bfdabadfe3613b7c98296de3d6665122136b) - refactor: collapse the two inert thread cores onto a shared base ([@okisdev](https://github.com/okisdev))
+
+- [#6080](https://github.com/assistant-ui/assistant-ui/pull/6080) [`996aa57`](https://github.com/assistant-ui/assistant-ui/commit/996aa5723cf8d7db00cc72da08713226d90ec0e1) - fix: reset remote thread selection and cached records when the thread-list adapter is replaced ([@okisdev](https://github.com/okisdev))
+
+- [#6124](https://github.com/assistant-ui/assistant-ui/pull/6124) [`06b04a7`](https://github.com/assistant-ui/assistant-ui/commit/06b04a7976d10fac3af40ae9ca59b52385ef2ae2) - chore: update dependencies ([@okisdev](https://github.com/okisdev))
+
+- [#6081](https://github.com/assistant-ui/assistant-ui/pull/6081) [`a614b5e`](https://github.com/assistant-ui/assistant-ui/commit/a614b5e44df5f59d82b63b60132a41c89f82e185) - Disconnect immediately when createVoiceSession receives an already-aborted signal. ([@Gujiassh](https://github.com/Gujiassh))
+
+- [#6087](https://github.com/assistant-ui/assistant-ui/pull/6087) [`07b51db`](https://github.com/assistant-ui/assistant-ui/commit/07b51dbbc749c94023fa25df99bb7f64dc211ff1) - Mark voice sessions cancelled when aborted or explicitly disconnected. ([@rupic-app](https://github.com/apps/rupic-app))
+
 ## 0.3.14
 
 ### Patch Changes

@@ -1,5 +1,32 @@
 # @assistant-ui/react-native
 
+## 0.1.38
+
+### Patch Changes
+
+- [#6122](https://github.com/assistant-ui/assistant-ui/pull/6122) [`99f181d`](https://github.com/assistant-ui/assistant-ui/commit/99f181dbd8171ac1f96086c65ae8eada103639b7) - feat: add composer quote and queue primitives ([@rupic-app](https://github.com/apps/rupic-app))
+
+- [#6104](https://github.com/assistant-ui/assistant-ui/pull/6104) [`0d2ac94`](https://github.com/assistant-ui/assistant-ui/commit/0d2ac946d831b87a6b5ecde97ec4a0e4e5722995) - chore: drop two unreachable re-export shims from react-native ([@samdickson22](https://github.com/samdickson22))
+  
+  `src/runtimes/RemoteThreadListHookInstanceManager.tsx` and
+  `src/runtimes/RemoteThreadListThreadListRuntimeCore.tsx` each re-exported one
+  symbol from `@assistant-ui/core/react`, but nothing imported them, they were
+  absent from `src/index.ts` and `src/internal.ts`, and the `"."`/`"./internal"`
+  exports map made them unreachable to consumers. The public API surface is
+  unchanged.
+
+- [#6114](https://github.com/assistant-ui/assistant-ui/pull/6114) [`98d5861`](https://github.com/assistant-ui/assistant-ui/commit/98d586152a1fc2d0ce43956b30ffbbc33a3c6fad) - fix: let Pressable wrapper primitives accept the platform render-function children ([@samdickson22](https://github.com/samdickson22))
+  
+  The wrapper prop types intersected the underlying `PressableProps["children"]` with `ReactNode`, which made the render-function branch unassignable. Ink consumers can now read `isFocused` and React Native consumers can now read `pressed` from function children, which the underlying `Pressable` already supported at runtime.
+
+- [#6119](https://github.com/assistant-ui/assistant-ui/pull/6119) [`7e0f4d5`](https://github.com/assistant-ui/assistant-ui/commit/7e0f4d5de2239890f9553c423d5d8b71e5d2ac44) - fix: announce actionable react-native primitives as buttons ([@samdickson22](https://github.com/samdickson22))
+  
+  React Native's `Pressable` assigns no accessibility role, so every actionable primitive was announced by VoiceOver and TalkBack as a generic element rather than a button, where the web primitives render a real `<button>`. Each Pressable primitive now defaults `accessibilityRole="button"` ahead of the caller's prop spread, so callers can still override it.
+
+- [#6124](https://github.com/assistant-ui/assistant-ui/pull/6124) [`06b04a7`](https://github.com/assistant-ui/assistant-ui/commit/06b04a7976d10fac3af40ae9ca59b52385ef2ae2) - chore: update dependencies ([@okisdev](https://github.com/okisdev))
+- Updated dependencies [[`fa30915`](https://github.com/assistant-ui/assistant-ui/commit/fa309156e033dc085c0d3b8fb97c27c81a3d2c6e), [`b355aef`](https://github.com/assistant-ui/assistant-ui/commit/b355aefbe2403025562f0e08494a57450bfdc049), [`4947ef4`](https://github.com/assistant-ui/assistant-ui/commit/4947ef4f9b0956bd4ca21c457b3cc7e79a2fc9e0), [`332f736`](https://github.com/assistant-ui/assistant-ui/commit/332f736e64bfa26f76cd60318279697ddbc0b36d), [`ef9254d`](https://github.com/assistant-ui/assistant-ui/commit/ef9254d5b2174fb4b58b4e954a8a0d60910a484c), [`1b30bfd`](https://github.com/assistant-ui/assistant-ui/commit/1b30bfdabadfe3613b7c98296de3d6665122136b), [`996aa57`](https://github.com/assistant-ui/assistant-ui/commit/996aa5723cf8d7db00cc72da08713226d90ec0e1), [`06b04a7`](https://github.com/assistant-ui/assistant-ui/commit/06b04a7976d10fac3af40ae9ca59b52385ef2ae2), [`a614b5e`](https://github.com/assistant-ui/assistant-ui/commit/a614b5e44df5f59d82b63b60132a41c89f82e185), [`07b51db`](https://github.com/assistant-ui/assistant-ui/commit/07b51dbbc749c94023fa25df99bb7f64dc211ff1)]:
+  - @assistant-ui/core@0.3.15
+
 ## 0.1.37
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @assistant-ui/react-o11y
 
+## 0.0.41
+
+### Patch Changes
+
+- [#6116](https://github.com/assistant-ui/assistant-ui/pull/6116) [`783e2a1`](https://github.com/assistant-ui/assistant-ui/commit/783e2a1b45215fbf8db669e8a473e1ddc1a1a682) - fix: flatten deeply nested observability traces without overflowing the call stack ([@Kinfe123](https://github.com/Kinfe123))
+
 ## 0.0.40
 
 ### Patch Changes
